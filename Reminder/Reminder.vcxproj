@@ -142,7 +142,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Apel.cpp" />
+    <ClCompile Include="Exceptie.cpp" />
+    <ClCompile Include="Nota.cpp" />
+    <ClCompile Include="Reminder.cpp" />
+    <ClCompile Include="Sedinta.cpp" />
     <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Apel.h" />
+    <ClInclude Include="Errors.h" />
+    <ClInclude Include="Exceptie.h" />
+    <ClInclude Include="Nota.h" />
+    <ClInclude Include="Reminder.h" />
+    <ClInclude Include="Sedinta.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

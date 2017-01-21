@@ -3,7 +3,7 @@
 class cSedinta : public cNota
 {
 private:
-	int durata;
+	float durata;
 	char *subiect;
 public:
 

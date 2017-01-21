@@ -13,3 +13,12 @@ cReminder::~cReminder()
 	for (i = 0; i < nrnote; i++)
 		delete (Note + i);
 }
+
+void cReminder::display(int d, int h)
+{
+	int i;
+	for (i = 0; i < nrnote; i++)
+	{
+		(Note + i)->display(d,h);
+	}
+}

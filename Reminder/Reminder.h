@@ -13,4 +13,8 @@ public:
 	void addSedinta();
 	void addApel();
 	void run();
+	void Load();
+	void Save();
+	cNota& operator[](int);
+	friend cReminder operator+(const cReminder&, const cReminder&);
 };

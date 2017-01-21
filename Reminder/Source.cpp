@@ -2,8 +2,8 @@
 #include"Exceptie.h"
 #include"Reminder.h"
 
-main() {
-	try {
+void main() {
+/*	try {
 		cReminder R1, R2, R3;
 		R1.addSedinta(121, 8, 0.5, “Stabilirea temelor de casa pentru studentii de anul 3”); // adaugarea in Reminder a unei sedinte care incepe la ora 8, ziua 121 si dureaza jumatate de ora, avand subiectul mentionat.
 		R1.addApel(121, 12, “0722123321”); // adaugarea in Reminder a unei apel care trebuie realizat in ziua 121, ora 12, catre numarul mentionat.
@@ -27,10 +27,10 @@ main() {
 		sm.addSedinta(121, 11, 9, “Sedinta de la ora 11:00 la 20 : 00”);
 		sm.setWorkInterval(8, 22); // setare interval orar de lucru 08:00 – 22:00
 		sm.addSedinta(3, “Sedinta de 3 ore”, 121, 128); //se incearca setarea unei sedinte de 3 ore cu subiectul mentionat intre zilele 121 si 128, in intervalul orar 08:00-22:00. Se va afisa pe ecran ca sedinta a fost planificata in ziua 122 de la ora 8:00 la ora 11:00.
-		*/
+		
 	}
 	catch (cException *e) {
 		e->printErrMessage();
 		delete e;
-	}
+	}*/
 }

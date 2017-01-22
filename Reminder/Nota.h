@@ -16,4 +16,5 @@ public:
 	void setZi(int);
 	void setOra(int);
 	virtual void display(int d = 1, int h = 0) = 0;
+	virtual char getType() = 0;
 };

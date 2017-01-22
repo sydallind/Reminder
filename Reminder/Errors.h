@@ -10,4 +10,5 @@
 #define ERR_PHONE_NR (ERR_BASE + 5)
 #define ERR_CALL (ERR_BASE + 6)
 #define ERR_MEETING (ERR_BASE + 7)
+#define ERR_DATE_HOUR (ERR_BASE + 8)
 #define ERR_UNKNOWN 999

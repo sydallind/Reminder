@@ -156,6 +156,7 @@
     <ClInclude Include="Nota.h" />
     <ClInclude Include="Reminder.h" />
     <ClInclude Include="Sedinta.h" />
+    <ClInclude Include="SmartReminder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

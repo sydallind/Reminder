@@ -1,5 +1,7 @@
 #pragma once
 #include"Nota.h"
+#include<stdio.h>
+
 class cSedinta : public cNota
 {
 private:
@@ -14,4 +16,8 @@ public:
 	void setDurata(float);
 	void setSubject(char* s);
 	void display();
+	void save(FILE*);
+	void load(FILE*);
+	void run(int, int);
+	char getType() { return 's' };
 };

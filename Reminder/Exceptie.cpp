@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Exceptie.h"
 #include<string.h>
+#include<stdio.h>
 
 cExceptie::cExceptie(int nr, char* msg)
 {
@@ -16,4 +17,9 @@ cExceptie::~cExceptie()
 		delete[] message;
 		message = NULL;
 	}
+}
+
+void cExceptie::printErrMessage()
+{
+	printf("%s", getMessage());
 }

@@ -19,5 +19,5 @@ public:
 	void setNrNote(int nr) { nrnote = nr; }
 	void setNote(cNota &add);
 	cNota& operator[](int);
-	friend cReminder& operator+(const cReminder&, const cReminder&);
+	friend cReminder operator+(const cReminder&, const cReminder&);
 };

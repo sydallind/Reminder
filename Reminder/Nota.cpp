@@ -15,7 +15,7 @@ cNota::cNota(int h, int d)
 			zi = d;
 			ora_start = h;
 		}
-		else throw ERR_DATE;
+		else throw new cExceptie(ERR_DATE,"Data trebuie sa apartina intervalului 1-365\n");
 	}
 	else
 		if (h >= 1 && h <= 365)
@@ -25,9 +25,9 @@ cNota::cNota(int h, int d)
 				zi = h;
 				ora_start = d;
 			}
-			else throw ERR_HOUR;
+			else throw new cExceptie(ERR_HOUR,"Ora trebuie sa apartina intervalului 0-23\n");
 		}
-		else throw ERR_DATE_HOUR;
+		else throw new cExceptie(ERR_DATE_HOUR,"Data si Ora nu apartin intervalelor specificate\n");
 }
 
 cNota::~cNota()

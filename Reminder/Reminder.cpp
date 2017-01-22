@@ -4,6 +4,7 @@
 #include"Reminder.h"
 #include"Apel.h"
 #include"Sedinta.h"
+#include"Exceptie.h"
 
 
 cReminder::cReminder()
@@ -13,9 +14,6 @@ cReminder::cReminder()
 
 cReminder::~cReminder()
 {
-	int i;
-	for (i = 0; i < nrnote; i++)
-		delete Note[i];
 }
 
 void cReminder::display(int d, int h)
@@ -46,7 +44,7 @@ void cReminder::addApel(int d, int h, char nr[11])
 		{
 			if(Note[i]->getType()=='a')
 				if (d == Note[i]->getZi() && h == Note[i]->getOra() && strcmp(Note[i]->getNr(), nr) == 0)
-					throw ERR_CALL;
+					throw new cExceptie(ERR_CALL,"Exista un alt apel pe acelasi numar programat in acelasi timp\n");
 		}
 		Note[nrnote++] = new cApel(d, h, nr);
 	}
@@ -56,7 +54,7 @@ void cReminder::addSedinta(int d, int h, float dur, char subiect[])
 {
 	if (nrnote == 0)
 	{
-		Note[nrnote++] = new cSedinta(d, h, dur,subiect);
+		Note[nrnote++] = new cSedinta(d, h, dur, subiect);
 	}
 	else
 	{
@@ -64,8 +62,12 @@ void cReminder::addSedinta(int d, int h, float dur, char subiect[])
 		{
 			if (Note[i]->getType() == 's')
 				if (d == Note[i]->getZi())
-					if(Note[i]->getOra()>=h && Note[i]->getOra()+Note[i]->getDur()<h)
-					throw ERR_MEETING;
+				{
+					if ((Note[i]->getOra() <= h) && (Note[i]->getOra() + Note[i]->getDur() > h))
+						throw new cExceptie(ERR_MEETING, "Se suprapun sedintele\n");
+					if ((Note[i]->getOra() > h) && (Note[i]->getOra() < h + dur))
+						throw new cExceptie(ERR_MEETING, "Se suprapun sedintele\n");
+				}
 		}
 		Note[nrnote++] = new cSedinta(d, h, dur, subiect);
 	}
@@ -78,7 +80,7 @@ void cReminder::run(int d,int h)
 		cNota &aux = *Note[i];
 		if (aux.getZi() == d)
 		{
-			if (aux.getOra() >= h && aux.getZi() <= h + 1)
+			if (aux.getOra() >= h && aux.getOra() <= h + 1)
 				aux.display();
 		}
 	}
@@ -172,7 +174,7 @@ cNota& cReminder::operator[](int poz)
 	return *Note[poz];
 }
 
-cReminder& operator+(const cReminder &R1,const cReminder &R2)
+cReminder operator+(const cReminder &R1,const cReminder &R2)
 {
 	cReminder aux;
 	int i, j;

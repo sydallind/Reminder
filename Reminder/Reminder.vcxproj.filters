@@ -35,26 +35,34 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Reminder.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Nota.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
     <ClInclude Include="Apel.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sedinta.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Exceptie.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Errors.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Nota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Reminder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sedinta.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SmartReminder.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="save.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="load.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

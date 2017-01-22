@@ -50,10 +50,3 @@ void cSedinta::save(FILE *save)
 void cSedinta::load(FILE *)
 {
 }
-
-void cSedinta::run(int d, int h)
-{
-	if (d == zi)
-		if (ora_start >= h && ora_start <= h + 1)
-			display();
-}

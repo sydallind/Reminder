@@ -2,6 +2,7 @@
 #include"Nota.h"
 #include<stdio.h>
 
+class cNota;
 class cSedinta : public cNota
 {
 private:
@@ -18,6 +19,7 @@ public:
 	void display();
 	void save(FILE*);
 	void load(FILE*);
-	void run(int, int);
-	char getType() { return 's'; };
+	char getType() { return 's'; }
+	char*getNr() { return NULL; }
+	float getDur() { return durata; }
 };

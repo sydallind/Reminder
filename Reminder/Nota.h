@@ -1,6 +1,7 @@
 #pragma once
 #define _CRT_SECURE_NO_WARININGS
 #include"Exceptie.h"
+#include<stdio.h>
 
 class cNota
 {
@@ -15,6 +16,9 @@ public:
 	int getOra() { return ora_start; }
 	void setZi(int);
 	void setOra(int);
-	virtual void display(int d = 1, int h = 0) = 0;
+	virtual void display() = 0;
 	virtual char getType() = 0;
+	virtual void save(FILE*) = 0;
+	virtual char* getNr() { return NULL; }
+	virtual float getDur() { return NULL; }
 };

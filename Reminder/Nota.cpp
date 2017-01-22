@@ -1,5 +1,4 @@
 #include"Nota.h"
-#include"Errors.h"
 
 cNota::cNota()
 {

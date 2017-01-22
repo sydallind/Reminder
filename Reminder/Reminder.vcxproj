@@ -158,6 +158,10 @@
     <ClInclude Include="Sedinta.h" />
     <ClInclude Include="SmartReminder.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="load.txt" />
+    <Text Include="save.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

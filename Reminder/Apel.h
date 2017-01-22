@@ -1,7 +1,7 @@
 #pragma once
 #include"Nota.h"
 #include<stdio.h>
-
+class cNota;
 class cApel : public cNota
 {
 private:
@@ -15,6 +15,6 @@ public:
 	void display();
 	void save(FILE*);
 	void load(FILE*);
-	void run(int, int);
 	char getType() { return 'a'; }
+	float getDur() {return NULL; }
 };

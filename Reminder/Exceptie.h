@@ -1,4 +1,5 @@
 #pragma once
+#include "Errors.h"
 
 class cExceptie
 {
@@ -10,4 +11,5 @@ public:
 	~cExceptie();
 	int getId() { return id; }
 	char* getMessage() { return message; }
+	void printErrMessage();
 };

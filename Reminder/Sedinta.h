@@ -19,5 +19,5 @@ public:
 	void save(FILE*);
 	void load(FILE*);
 	void run(int, int);
-	char getType() { return 's' };
+	char getType() { return 's'; };
 };

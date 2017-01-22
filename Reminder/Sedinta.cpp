@@ -41,3 +41,19 @@ void cSedinta::display()
 {
 	cout << "Sedinta in ziua " << zi << " la ora " << ora_start << " de durata " << durata << " cu subiectul " << subiect << endl;
 }
+
+void cSedinta::save(FILE *save)
+{
+	fprintf(save, "Sedinta in ziua %d la ora %d, cu subiectul %s. Sedinta va dura %f\n", zi, ora_start, subiect, durata);
+}
+
+void cSedinta::load(FILE *)
+{
+}
+
+void cSedinta::run(int d, int h)
+{
+	if (d == zi)
+		if (ora_start >= h && ora_start <= h + 1)
+			display();
+}
